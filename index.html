@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PINKNOISE ★ música / recuerdos / estéticas / obsesiones</title>
+  <meta name="description" content="PINKNOISE, un archivo musical personal: música, recuerdos, estéticas y obsesiones.">
+  <meta name="theme-color" content="#050505">
+  <script>try{var t=localStorage.getItem("pn-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@400;500;700&family=VT323&family=Yellowtail&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="cursores.css">
+</head>
+<body id="arriba">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12,1 15,9 23.5,9.3 16.8,14.6 19.1,23 12,18.2 4.9,23 7.2,14.6 0.5,9.3 9,9" fill="currentColor"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#principal">Saltar al contenido</a>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="topbar" role="region" aria-label="Avisos del sitio">
+    <div class="topbar__inner">
+      <p class="topbar__welcome"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg> BIENVENIDA A MI ARCHIVO MUSICAL</p>
+      <p class="topbar__now"><span class="topbar__now-label">SONANDO AHORA:</span><span id="topbar-now">elegí un artista</span></p>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Cambiar a modo claro">☀ MODO CLARO</button>
+    </div>
+  </div>
+
+  <div class="site">
+
+    <!-- ENCABEZADO -->
+    <header class="masthead">
+      <div class="masthead__center">
+        <h1 class="logo" aria-label="Pinknoise">
+          <span class="logo__a" aria-hidden="true">PINK</span>
+          <span class="logo__b" aria-hidden="true">NOISE</span>
+        </h1>
+        <p class="masthead__tagline">música / recuerdos / estéticas / obsesiones</p>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN (solo 3 secciones) -->
+    <nav class="nav" aria-label="Principal">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-list"><span aria-hidden="true">☰</span> MENÚ</button>
+      <ul class="nav__list" id="nav-list">
+        <li><a class="nav__link" href="#inicio" aria-current="page"><span class="nav__star" aria-hidden="true">★</span>INICIO</a></li>
+        <li><a class="nav__link" href="#artistas"><span class="nav__star" aria-hidden="true">★</span>ARTISTAS</a></li>
+        <li><a class="nav__link" href="#archivo"><span class="nav__star" aria-hidden="true">★</span>ARCHIVO</a></li>
+      </ul>
+    </nav>
+
+    <div class="layout">
+
+      <!-- REPRODUCTOR (única caja lateral) -->
+      <aside class="sidebar" aria-label="Reproductor">
+        <section class="box player" aria-labelledby="player-t">
+          <h2 class="box__title" id="player-t"><span>♫ SONANDO AHORA</span><span class="box__btns" aria-hidden="true"><i></i><i></i><i></i></span></h2>
+          <div class="box__body">
+            <div class="player__cover" id="p-cover" role="img" aria-label="Portada"></div>
+            <p class="player__artist" id="p-artist">ARTISTA</p>
+            <p class="player__song" id="p-song">canción</p>
+            <p class="player__status" id="p-status" role="status" aria-live="polite"></p>
+            <div class="player__bar">
+              <span id="p-time">0:00</span>
+              <input type="range" id="p-seek" min="0" max="100" step="0.1" value="0" aria-label="Posición de la canción">
+              <span id="p-dur">0:00</span>
+            </div>
+            <div class="player__controls">
+              <button class="pbtn pbtn--main" id="p-play" type="button" aria-label="Reproducir">▶</button>
+              <button class="pbtn" id="p-mute" type="button" aria-label="Silenciar">🔊</button>
+              <input type="range" id="p-vol" min="0" max="1" step="0.05" value="0.8" aria-label="Volumen">
+            </div>
+            <a class="player__spotify" id="p-spotify" href="#" target="_blank" rel="noopener noreferrer" hidden>ESCUCHAR EN SPOTIFY ↗</a>
+            <p class="player__note">Previews de 30 segundos vía iTunes.</p>
+          </div>
+        </section>
+      </aside>
+
+      <main class="main" id="principal">
+
+        <!-- 1. INICIO: texto + una foto tuya -->
+        <section class="hero" id="inicio" aria-labelledby="hero-t">
+          <div class="hero__text">
+            <p class="hand hero__hand">pasá, ponete cómoda ♡</p>
+            <h2 class="hero__title" id="hero-t">BIENVENIDA A MI<br>RINCONCITO DE <span class="hero__hot">INTERNET</span></h2>
+            <p class="hero__sub">música, recuerdos y cosas que suenan mejor después de medianoche.</p>
+            <p class="hero__cta">
+              <a class="btn" href="#artistas">ENTRAR AL ARCHIVO <span aria-hidden="true">★</span></a>
+            </p>
+          </div>
+          <figure class="hero__photo">
+            <img src="img/valen-1.jpg" alt="Foto de valen" width="300" height="360" data-ph="valen">
+          </figure>
+        </section>
+
+        <!-- 2. ARTISTA DESTACADA -->
+        <section class="featured" id="destacada" aria-labelledby="dest-t">
+          <h2 class="section-title section-title--aqua" id="dest-t"><span aria-hidden="true">★</span> ARTISTA DESTACADA</h2>
+          <div class="feature" id="feature-card"></div>
+        </section>
+
+        <!-- 3. ARTISTAS -->
+        <section class="artists" id="artistas" aria-labelledby="art-t">
+          <h2 class="section-title section-title--lime" id="art-t"><span aria-hidden="true">★</span> EL ARCHIVO DE ARTISTAS</h2>
+          <p class="artists__intro">Tocá <strong>▶ ESCUCHAR</strong> en cualquiera y suena una preview.</p>
+          <div class="filters" id="filters" role="group" aria-label="Filtrar artistas por etiqueta"></div>
+          <div class="cards" id="cards" aria-live="polite"></div>
+        </section>
+
+        <!-- 4. ARCHIVO: recuerdos con fotos tuyas -->
+        <section class="block" id="archivo" aria-labelledby="arc-t">
+          <h2 class="section-title" id="arc-t"><span aria-hidden="true">★</span> ARCHIVO</h2>
+          <ul class="gallery" id="gallery"></ul>
+        </section>
+
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p class="footer__links">
+        <a href="#inicio">INICIO</a>
+        <a href="#artistas">ARTISTAS</a>
+        <a href="#archivo">ARCHIVO</a>
+      </p>
+      <p class="footer__small">© <span id="year">2026</span> PINKNOISE · hecho con <span aria-hidden="true">♡</span><span class="sr-only">amor</span> · <span class="hand">xoxo valen</span></p>
+      <p class="footer__top"><a href="#arriba" id="to-top">▲ VOLVER ARRIBA</a></p>
+    </footer>
+  </div>
+
+  <div class="minibar" id="minibar">
+    <button class="pbtn pbtn--main" id="mb-play" type="button" aria-label="Reproducir">▶</button>
+    <span class="minibar__text" id="mb-text"></span>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
